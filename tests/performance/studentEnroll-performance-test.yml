@@ -1,0 +1,27 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+headers:
+  Authorization: "Bearer access_token_here"
+  
+scenarios:
+  - name: "Enroll Student in Course"
+    flow:
+      - post:
+          url: "/api/studentEnroll/add"
+          json:
+            studentId: "STUDENT123"
+            courseId: "COURSE123"
+
+  - name: "Get Enrollments by Student ID"
+    flow:
+      - get:
+          url: "/api/studentEnroll/all/STUDENT123"
+
+  - name: "Delete Enrollment by Student ID"
+    flow:
+      - delete:
+          url: "/api/studentEnroll/delete/STUDENT123"

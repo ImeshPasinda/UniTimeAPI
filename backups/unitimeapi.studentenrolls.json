@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "65f9adafb955a788470f5ca2"
+  },
+  "studentId": "ST001",
+  "courseId": "CS001",
+  "enrollmentDate": {
+    "$date": "2024-03-19T15:22:23.546Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "65f99e4d4633619c7438e9cc"
+  },
+  "memberId": "F001",
+  "username": "Faculty_Member",
+  "email": "faculty.member@gmail.com",
+  "password": "$2b$10$mRxLU/QkIFtNa5kfBrzfGuNb0sSWZT57xc5VQEUUVQrumDGl/7dDC",
+  "role": "Faculty",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f99d924633619c7438e9c6"
+  },
+  "memberId": "ST001",
+  "username": "Imesh_Pasinda",
+  "email": "imeshpasinda@gmail.com",
+  "password": "$2b$10$j4RajfecC/JiEZBmffFJSOnFyDlzfGZ4Y1SPmW7dNyvm1D8spkesi",
+  "role": "Student",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f99db84633619c7438e9c9"
+  },
+  "memberId": "A001",
+  "username": "Admin",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$htg77fo795qbB/GdhIbjZ.XCNN55rur/.GgTkenzKCcxPJ9QAg8Pa",
+  "role": "Admin",
+  "__v": 0
+}]

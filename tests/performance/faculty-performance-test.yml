@@ -1,0 +1,36 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10 
+
+headers:
+  Authorization: "Bearer access_token_here"
+
+scenarios:
+  - name: "Create Faculty"
+    flow:
+      - post:
+          url: "/api/faculty"
+          json:
+            facultyId: "F123"
+            facultyName: "John Doe"
+            facultyEmail: "johndoe@example.com"
+
+  - name: "Get All Faculties"
+    flow:
+      - get:
+          url: "/api/faculty"
+
+  - name: "Update Faculty by ID"
+    flow:
+      - put:
+          url: "/api/faculty/F123"
+          json:
+            facultyName: "Jane Doe"
+            facultyEmail: "janedoe@example.com"
+
+  - name: "Delete Faculty by ID"
+    flow:
+      - delete:
+          url: "/api/faculty/F123"

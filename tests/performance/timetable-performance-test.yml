@@ -1,0 +1,42 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+headers:
+  Authorization: "Bearer access_token_here"
+  
+scenarios:
+  - name: "Create Timetable Entry"
+    flow:
+      - post:
+          url: "/api/timetable/add"
+          json:
+            timetableId: "TT0001"
+            courseId: "COURSE123"
+            startTime: "2024-03-15T08:00:00Z"
+            endTime: "2024-03-15T10:00:00Z"
+            facultyId: "FACULTY123"
+            roomId: "ROOM123"
+
+  - name: "Update Timetable Entry"
+    flow:
+      - put:
+          url: "/api/timetable/update/TT0001"
+          json:
+            courseId: "COURSE456"
+            startTime: "2024-03-16T08:00:00Z"
+            endTime: "2024-03-16T10:00:00Z"
+            facultyId: "FACULTY456"
+            roomId: "ROOM456"
+
+  - name: "Delete Timetable Entry"
+    flow:
+      - delete:
+          url: "/api/timetable/delete/TT0001"
+
+  - name: "Get All Timetable Entries"
+    flow:
+      - get:
+          url: "/api/timetable/all"

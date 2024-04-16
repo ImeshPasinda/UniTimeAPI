@@ -1,0 +1,9 @@
+[{
+  "_id": {
+    "$oid": "65f9abb6b955a788470f5c43"
+  },
+  "facultyId": "FA001",
+  "facultyName": "Computer Faculty",
+  "facultyEmail": "foc@gmail.com",
+  "__v": 0
+}]

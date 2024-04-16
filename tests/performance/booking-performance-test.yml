@@ -1,0 +1,40 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+headers:
+  Authorization: "Bearer access_token_here"
+
+scenarios:
+  - name: "Book a Room"
+    flow:
+      - post:
+          url: "/api/booking/add"
+          json:
+            bookingId: "12345"
+            memberId: "test123"
+            roomId: "R101"
+            startTime: "2024-03-10T09:00:00.000Z"
+            endTime: "2024-03-10T10:00:00.000Z"
+
+  - name: "Update Booking"
+    flow:
+      - put:
+          url: "/api/booking/update/12345"
+          json:
+            roomId: "R102"
+            memberId: "test123"
+            startTime: "2024-03-10T10:00:00.000Z"
+            endTime: "2024-03-10T11:00:00.000Z"
+
+  - name: "Delete Booking"
+    flow:
+      - delete:
+          url: "/api/booking/delete/12345"
+
+  - name: "Get All Available Bookings"
+    flow:
+      - get:
+          url: "/api/booking/available"

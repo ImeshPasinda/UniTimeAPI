@@ -1,0 +1,41 @@
+config:
+  target: "http://localhost:5000"
+  phases:
+    - duration: 60
+      arrivalRate: 10 
+
+headers:
+  Authorization: "Bearer access_token_here"
+
+scenarios:
+  - name: "Create Room"
+    flow:
+      - post:
+          url: "/api/room/add"
+          json:
+            roomId: "101"
+            roomType: "Classroom"
+            capacity: 50
+
+  - name: "Get All Rooms"
+    flow:
+      - get:
+          url: "/api/room/all"
+
+  - name: "Get Room by ID"
+    flow:
+      - get:
+          url: "/api/room/get/101"
+
+  - name: "Update Room by ID"
+    flow:
+      - put:
+          url: "/api/room/update/101"
+          json:
+            roomType: "Auditorium"
+            capacity: 100
+
+  - name: "Delete Room by ID"
+    flow:
+      - delete:
+          url: "/api/room/delete/101"

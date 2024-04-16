@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "65f9ab98b955a788470f5c3c"
+  },
+  "user": "Public",
+  "title": "New room created: R001",
+  "text": "A new Lab room with ID R001 and capacity 30 has been created.",
+  "read": false,
+  "timestamp": {
+    "$date": "2024-03-19T15:13:28.271Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f9ac2eb955a788470f5c53"
+  },
+  "user": "Public",
+  "title": "New timetable created: R001",
+  "text": "A new timetable with ID T001 has been created. Details: Course ID: CS001, Start Time: 2024-03-10T09:00:00Z, End Time: 2024-03-10T11:00:00Z, Faculty ID: FA001, Room ID: R001.",
+  "read": false,
+  "timestamp": {
+    "$date": "2024-03-19T15:15:58.841Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f9af1f1a8b6f1bbb0d2ade"
+  },
+  "user": "Public",
+  "title": "Examination Notice",
+  "text": "General Knowledge Test on next week",
+  "read": false,
+  "timestamp": {
+    "$date": "2024-03-19T15:28:31.387Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65f9af991a8b6f1bbb0d2ae6"
+  },
+  "user": "ST001",
+  "title": "Course Fee Payment Notice",
+  "text": "Dear ST001, This notice is to remind you about the upcoming deadline for course fee payment. Please be advised that the deadline for payment is [insert deadline date]. Failure to submit your payment by the deadline may result in consequences such as late fees or deregistration from courses. If you have any questions or concerns regarding the payment process, please don't hesitate to contact the administration office. Thank you for your attention to this matter. Regards, [Your Institution's Name]",
+  "read": false,
+  "timestamp": {
+    "$date": "2024-03-19T15:30:33.080Z"
+  },
+  "__v": 0
+}]

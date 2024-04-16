@@ -1,0 +1,45 @@
+config:
+  target: "http://localhost:5000" 
+  phases:
+    - duration: 60
+      arrivalRate: 10
+
+headers:
+  Authorization: "Bearer access_token_here"
+
+scenarios:
+  - name: "Create Course"
+    flow:
+      - post:
+          url: "/api/courses"
+          json:
+            courseId: "C123"
+            name: "Computer Science"
+            description: "Introduction to Computer Science"
+            credits: 3
+            facultyId: "F567"
+
+  - name: "Get All Courses"
+    flow:
+      - get:
+          url: "/api/courses"
+
+  - name: "Get Course by ID"
+    flow:
+      - get:
+          url: "/api/courses/C123"
+
+  - name: "Update Course by ID"
+    flow:
+      - put:
+          url: "/api/courses/C123"
+          json:
+            name: "Updated Computer Science"
+            description: "Advanced Computer Science"
+            credits: 4
+            facultyId: "F567"
+
+  - name: "Delete Course by ID"
+    flow:
+      - delete:
+          url: "/api/courses/C123"
